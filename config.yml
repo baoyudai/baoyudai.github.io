@@ -11,9 +11,9 @@ taxonomies:
 
 menu:
     main:
-        - name: Papers
-          url: papers/
-          weight: 1
+        #- name: Papers
+        #  url: papers/
+        #  weight: 1
         #- name: Courses
          # url: courses/
          # weight: 2
@@ -57,7 +57,7 @@ consequat."
           #imageHeight: 160
           #imageTitle: Prof. Name
           buttons:
-            - name: Papers
+            #- name: Papers
               url: papers/
             #- name: Courses
               url: courses/
@@ -67,7 +67,7 @@ consequat."
               url: https://pmichaillat.substack.com
             #- name: Tags
               url: tags/
-            - name: Archive
+            #- name: Archive
               url: archive/
     socialIcons:
         - name: CV
