@@ -73,7 +73,7 @@ consequat."
         - name: CV
           url: cv.pdf
         - name: Email
-          url: dbydai@ucdavis.edu
+          url: mailto:dbydai@ucdavis.edu
         #- name: Location
         #  url: location/
         #- name: Office Hours
