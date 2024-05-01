@@ -25,9 +25,8 @@ menu:
          # weight: 4
 
 params:
-    description: "I am a Professor of Subject at the University of Place. My research covers various topics.
-consequat."
-    author: Name
+    description: "I am a PhD student in philosophy."
+    author: Baoyu Dai
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
     defaultTheme: light
@@ -60,20 +59,18 @@ consequat."
             - name: Research
               url: Research/
             #- name: Courses
-              url: courses/
+            #  url: courses/
             #- name: Data
-              url: data/
+            #  url: data/
             #- name: Newsletter
-              url: https://pmichaillat.substack.com
+            #  url: https://pmichaillat.substack.com
             #- name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
+            #  url: tags/
     socialIcons:
         - name: CV
           url: cv.pdf
-        #- name: Email
-        #  url: mailto:dbydai@ucdavis.edu
+        - name: Email
+          url: mailto:dbydai@ucdavis.edu
         #- name: Location
         #  url: location/
         #- name: Office Hours
