@@ -51,11 +51,11 @@ consequat."
     profileMode:
           enabled: true
           title: Baoyu Dai
-          subtitle: "I am a PhD Student studying philosophy in the philosophy department at UC Davis."
-          imageUrl: "picture.jpeg"
-          imageWidth: 160
-          imageHeight: 160
-          imageTitle: Prof. Name
+          subtitle: "I am currently a PhD student in philosophy at UC Davis, where my primary focus is on the philosophy of mathematics, especially the philosophy of mathematical practice. I earned my master's degree at the University of Wisconsin-Milwaukee and my bachelor's degree at the University of Toronto."
+          #imageUrl: "picture.jpeg"
+          #imageWidth: 160
+          #imageHeight: 160
+          #imageTitle: Prof. Name
           buttons:
             - name: Papers
               url: papers/
