@@ -11,8 +11,8 @@ taxonomies:
 
 menu:
     main:
-        - name: Papers
-          url: papers/
+        - name: Research
+          url: Research/
           weight: 1
         #- name: Courses
          # url: courses/
@@ -57,8 +57,8 @@ consequat."
           #imageHeight: 160
           #imageTitle: Prof. Name
           buttons:
-            - name: Papers
-              url: papers/
+            - name: Research
+              url: Research/
             #- name: Courses
               url: courses/
             #- name: Data
