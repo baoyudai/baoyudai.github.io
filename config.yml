@@ -71,7 +71,7 @@ params:
           url: cv.pdf
         - name: Email
           url: mailto:dbydai@ucdavis.edu
-        - name: PhilPeople
+        - name: philpeople
           url: https://philpeople.org/profiles/baoyu-dai
         #- name: Office Hours
         #  url: officehours/
