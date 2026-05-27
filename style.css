@@ -6,7 +6,7 @@
 }
 
 body {
-    /* LaTeX MathPazo / Palatino fallback font stack */
+    /* Classic Academic LaTeX MathPazo / Palatino Typography fallback stack */
     font-family: "Palladio", "URW Palladio L", "Palatino Linotype", "Palatino", "Book Antiqua", Georgia, serif;
     color: #222222; 
     line-height: 1.65;
@@ -19,16 +19,16 @@ body {
     margin: 0 auto;
 }
 
-/* --- THE TOTAL HEADER FIX --- */
+/* --- THE HEADER LAYOUT --- */
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Securely isolates photo on left, content block on right */
+    justify-content: space-between; /* Pushes the image container and text group to opposite walls */
     margin-bottom: 60px;
     width: 100%;
 }
 
-/* Profile photo size parameters */
+/* Left side profile photo box */
 .profile-box {
     flex: 0 0 115px;
 }
@@ -41,14 +41,14 @@ header {
     display: block;
 }
 
-/* THE SPECIFIC ALIGNMENT CURE:
-   Grouping name and nav items as a tight vertical column 
-   and anchoring their right walls together flawlessly.
+/* THE EXACT ALIGNMENT FIX:
+   We bundle the h1 and nav into a strict vertical column, 
+   then align their right edges directly on top of each other.
 */
 .header-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* This forces the menu to anchor to the exact rightmost letter of your name */
+    align-items: flex-end; /* This aligns the text bounds perfectly flush right */
     text-align: right;
 }
 
@@ -56,22 +56,33 @@ h1 {
     font-size: 2.7rem;
     font-weight: 400; 
     color: #111111;
-    margin-bottom: 12px; /* Breathing room between name and links */
+    margin-bottom: 12px; /* Margin below your name */
     letter-spacing: -0.5px;
-    line-height: 1.1;
+    line-height: 1.0; /* Snaps the line box down tightly to the name boundaries */
 }
 
-/* Navigation Menu */
+/* Navigation Menu Box */
 nav {
-    display: block;
+    display: flex;
+    justify-content: flex-end; /* Forces contents rightward */
+    align-items: center;
+    width: 100%;
 }
 
 nav a {
     text-decoration: none;
     color: #777777; 
-    margin-left: 24px; /* Clean tracking gaps between pages */
     font-size: 1.15rem; 
+    margin-left: 24px; /* Clean spacing gaps between home and papers */
     transition: color 0.15s ease;
+}
+
+/* CRITICAL STEP: 
+   The very last link ('papers') must have 0 right margin so its 
+   outer bounding edge is perfectly flush with the 'i' in 'Dai'.
+*/
+nav a:last-child {
+    margin-right: 0px; 
 }
 
 nav a:hover {
@@ -96,7 +107,7 @@ p {
     text-align: left;
 }
 
-/* High-contrast academic links */
+/* High-contrast traditional academic links */
 .content-body a {
     color: #1a0dab;
     text-decoration: none;
