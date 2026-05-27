@@ -1,0 +1,101 @@
+/* Universal Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+/* Page Layout Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Navigation Links */
+nav {
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0066cc;
+    margin-right: 20px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.active {
+    color: #333333;
+    text-decoration: none;
+    cursor: default;
+    font-weight: 500;
+}
+
+/* Structural Layout */
+main {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.profile-col {
+    flex: 0 0 180px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.bio-col {
+    flex: 1;
+}
+
+/* Typography styling */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+p {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+/* Paper List Styling */
+.paper-list {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.paper-list li {
+    margin-bottom: 25px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .profile-col {
+        width: 150px;
+        margin: 0 auto;
+    }
+}
