@@ -6,53 +6,66 @@
 }
 
 body {
-    /* The LaTeX MathPazo / Palatino fallback font stack */
+    /* LaTeX MathPazo / Palatino fallback font stack */
     font-family: "Palladio", "URW Palladio L", "Palatino Linotype", "Palatino", "Book Antiqua", Georgia, serif;
     color: #222222; 
-    line-height: 1.6;
+    line-height: 1.65; /* Slightly relaxed line height for larger text */
     background-color: #ffffff;
-    padding: 120px 20px 60px 20px; 
+    padding: 140px 20px 60px 20px; 
 }
 
 .container {
-    max-width: 720px;
+    max-width: 760px; /* Slightly widened to handle the bigger text footprint cleanly */
     margin: 0 auto;
 }
 
-/* --- THE SEBASTIAN LIU LAYOUT --- */
+/* --- HEADER FIX --- */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    margin-bottom: 55px;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+/* Left side profile photo box */
+.profile-box {
+    flex: 0 0 115px; /* Scaled up image slightly to match larger text */
 }
 
 .profile-pic {
-    width: 105px;
-    height: 105px;
+    width: 115px;
+    height: 115px;
     object-fit: cover;
     border-radius: 50%; 
     display: block;
 }
 
+/* Right side content block containing Name and Navigation */
 .header-right {
-    text-align: right;
+    text-align: right; 
 }
 
 h1 {
-    font-size: 2.3rem;
+    font-size: 2.7rem; /* Bumped up from 2.5rem */
     font-weight: 400; 
     color: #111111;
     margin-bottom: 10px;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
 }
 
-/* Navigation Links */
+/* Navigation Menu */
+nav {
+    display: block;
+    margin-top: 6px;
+}
+
 nav a {
     text-decoration: none;
     color: #777777; 
-    margin-left: 18px;
-    font-size: 0.95rem;
+    margin-left: 22px; 
+    font-size: 1.05rem; /* Bumped up navigation text size */
     transition: color 0.15s ease;
 }
 
@@ -66,30 +79,34 @@ nav a.active {
     text-decoration: underline;
 }
 
-/* Content Text and Bibliography Lists */
+/* --- THE MAIN CONTENT AREA --- */
 .content-body {
     margin-top: 20px;
+    clear: both;
 }
 
 p {
-    margin-bottom: 22px;
-    font-size: 1.05rem;
+    margin-bottom: 24px;
+    font-size: 1.15rem; /* Bumped up from 1.05rem */
+    text-align: left;
 }
 
-a {
-    color: #0033cc;
+/* High-contrast academic links */
+.content-body a {
+    color: #1a0dab;
     text-decoration: none;
 }
 
-a:hover {
+.content-body a:hover {
     text-decoration: underline;
 }
 
+/* Publication layout */
 .paper-list {
     list-style-type: none;
 }
 
 .paper-list li {
-    margin-bottom: 26px;
-    font-size: 1.05rem;
+    margin-bottom: 28px;
+    font-size: 1.15rem; /* Bumped up to match body copy sizing */
 }
