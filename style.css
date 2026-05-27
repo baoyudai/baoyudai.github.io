@@ -18,11 +18,11 @@ body {
     margin: 0 auto;
 }
 
-/* --- THE HEADER LAYOUT --- */
+/* --- THE HEADER FLEXBOX LAYOUT --- */
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between; /* Forces image left and text block right */
     margin-bottom: 60px;
     width: 100%;
 }
@@ -39,6 +39,7 @@ header {
     display: block;
 }
 
+/* Houses both the name and menu, aligned perfectly right */
 .header-right {
     display: flex;
     flex-direction: column;
@@ -55,26 +56,22 @@ h1 {
     line-height: 1.0; 
 }
 
-/* Navigation Menu Box */
+/* Menu Layout Box */
 nav {
     display: flex;
     justify-content: flex-end; 
     align-items: center;
-    width: 100%;
 }
 
 nav a {
     text-decoration: none;
     color: #777777; 
     font-size: 1.15rem; 
-    margin-left: 24px; /* Universal spacing between menu items */
+    margin-left: 24px; 
     transition: color 0.15s ease;
 }
 
-/* THE RIGHT-WALL ANCHOR UPGRADE:
-   This dynamically targets the absolute final link in the menu 
-   (now 'teaching') and zeroes out its right edge margin.
-*/
+/* Snaps the right letter of 'teaching' flush with the end of your name */
 nav a:last-child {
     margin-right: 0px; 
 }
@@ -89,7 +86,7 @@ nav a.active {
     text-decoration: underline;
 }
 
-/* --- THE MAIN CONTENT AREA --- */
+/* --- MAIN CONTENT AREA --- */
 .content-body {
     margin-top: 20px;
     clear: both;
