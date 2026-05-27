@@ -121,3 +121,16 @@ p {
     margin-bottom: 28px;
     font-size: 1.15rem;
 }
+/* --- COMPACT LIST LAYOUT FOR PAPERS & TEACHING --- */
+.paper-list, .teaching-list {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+/* This compact configuration forces both lists to behave exactly the same way */
+.paper-list li, .teaching-list li {
+    margin-bottom: 10px; /* Snaps item entries closer vertically */
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
