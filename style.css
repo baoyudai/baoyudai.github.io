@@ -1,4 +1,4 @@
-/* Universal Resets */
+/* Reset default browser spacing */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,96 +6,90 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #333333;
+    /* The LaTeX MathPazo / Palatino fallback font stack */
+    font-family: "Palladio", "URW Palladio L", "Palatino Linotype", "Palatino", "Book Antiqua", Georgia, serif;
+    color: #222222; 
     line-height: 1.6;
     background-color: #ffffff;
-    padding: 40px 20px;
+    padding: 120px 20px 60px 20px; 
 }
 
-/* Page Layout Container */
 .container {
-    max-width: 800px;
+    max-width: 720px;
     margin: 0 auto;
 }
 
-/* Navigation Links */
-nav {
-    margin-bottom: 40px;
+/* --- THE SEBASTIAN LIU LAYOUT --- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 55px;
 }
 
+.profile-pic {
+    width: 105px;
+    height: 105px;
+    object-fit: cover;
+    border-radius: 50%; 
+    display: block;
+}
+
+.header-right {
+    text-align: right;
+}
+
+h1 {
+    font-size: 2.3rem;
+    font-weight: 400; 
+    color: #111111;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+}
+
+/* Navigation Links */
 nav a {
     text-decoration: none;
-    color: #0066cc;
-    margin-right: 20px;
-    font-size: 1.1rem;
+    color: #777777; 
+    margin-left: 18px;
+    font-size: 0.95rem;
+    transition: color 0.15s ease;
 }
 
 nav a:hover {
+    color: #111111;
     text-decoration: underline;
 }
 
 nav a.active {
-    color: #333333;
-    text-decoration: none;
-    cursor: default;
-    font-weight: 500;
+    color: #111111; 
+    text-decoration: underline;
 }
 
-/* Structural Layout */
-main {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.profile-col {
-    flex: 0 0 180px;
-}
-
-.profile-pic {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    display: block;
-}
-
-.bio-col {
-    flex: 1;
-}
-
-/* Typography styling */
-h1 {
-    font-size: 2.2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #111111;
+/* Content Text and Bibliography Lists */
+.content-body {
+    margin-top: 20px;
 }
 
 p {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
     font-size: 1.05rem;
 }
 
-/* Paper List Styling */
+a {
+    color: #0033cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .paper-list {
-    margin-top: 20px;
     list-style-type: none;
 }
 
 .paper-list li {
-    margin-bottom: 25px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    main {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .profile-col {
-        width: 150px;
-        margin: 0 auto;
-    }
+    margin-bottom: 26px;
+    font-size: 1.05rem;
 }
