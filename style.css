@@ -6,7 +6,6 @@
 }
 
 body {
-    /* Classic Academic LaTeX MathPazo / Palatino Typography fallback stack */
     font-family: "Palladio", "URW Palladio L", "Palatino Linotype", "Palatino", "Book Antiqua", Georgia, serif;
     color: #222222; 
     line-height: 1.65;
@@ -23,12 +22,11 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Pushes the image container and text group to opposite walls */
+    justify-content: space-between; 
     margin-bottom: 60px;
     width: 100%;
 }
 
-/* Left side profile photo box */
 .profile-box {
     flex: 0 0 115px;
 }
@@ -41,14 +39,10 @@ header {
     display: block;
 }
 
-/* THE EXACT ALIGNMENT FIX:
-   We bundle the h1 and nav into a strict vertical column, 
-   then align their right edges directly on top of each other.
-*/
 .header-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* This aligns the text bounds perfectly flush right */
+    align-items: flex-end; 
     text-align: right;
 }
 
@@ -56,15 +50,15 @@ h1 {
     font-size: 2.7rem;
     font-weight: 400; 
     color: #111111;
-    margin-bottom: 12px; /* Margin below your name */
+    margin-bottom: 12px; 
     letter-spacing: -0.5px;
-    line-height: 1.0; /* Snaps the line box down tightly to the name boundaries */
+    line-height: 1.0; 
 }
 
 /* Navigation Menu Box */
 nav {
     display: flex;
-    justify-content: flex-end; /* Forces contents rightward */
+    justify-content: flex-end; 
     align-items: center;
     width: 100%;
 }
@@ -73,13 +67,13 @@ nav a {
     text-decoration: none;
     color: #777777; 
     font-size: 1.15rem; 
-    margin-left: 24px; /* Clean spacing gaps between home and papers */
+    margin-left: 24px; /* Universal spacing between menu items */
     transition: color 0.15s ease;
 }
 
-/* CRITICAL STEP: 
-   The very last link ('papers') must have 0 right margin so its 
-   outer bounding edge is perfectly flush with the 'i' in 'Dai'.
+/* THE RIGHT-WALL ANCHOR UPGRADE:
+   This dynamically targets the absolute final link in the menu 
+   (now 'teaching') and zeroes out its right edge margin.
 */
 nav a:last-child {
     margin-right: 0px; 
@@ -107,7 +101,6 @@ p {
     text-align: left;
 }
 
-/* High-contrast traditional academic links */
 .content-body a {
     color: #1a0dab;
     text-decoration: none;
@@ -117,12 +110,11 @@ p {
     text-decoration: underline;
 }
 
-/* Publication layout */
-.paper-list {
+.paper-list, .teaching-list {
     list-style-type: none;
 }
 
-.paper-list li {
+.paper-list li, .teaching-list li {
     margin-bottom: 28px;
     font-size: 1.15rem;
 }
