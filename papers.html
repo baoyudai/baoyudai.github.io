@@ -3,34 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Publications - Your Name</title>
+    
+    <style>
+        /* Exact same matching styling rules as index.html */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #333333; 
+            line-height: 1.5;
+            background-color: #ffffff;
+            padding: 120px 20px; 
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            margin-bottom: 40px;
+        }
+
+        .profile-box {
+            flex: 0 0 110px; 
+        }
+
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%; 
+            display: block;
+        }
+
+        .brand-box {
+            text-align: right; 
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 400; 
+            color: #222222;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #777777; 
+            margin-left: 15px;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        nav a.active {
+            color: #222222;
+            text-decoration: underline;
+        }
+
+        .content-body {
+            margin-top: 30px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #222222;
+        }
+
+        .paper-list {
+            list-style-type: none;
+        }
+
+        .paper-list li {
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
+
+        .paper-list a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .paper-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
-        <nav>
-            <a href="index.html">home</a>
-            <a href="papers.html" class="active">papers</a>
-        </nav>
-        
-        <main style="display: block;">
-            <h1>Selected Papers</h1>
+        <header>
+            <div class="profile-box">
+                <img src="headshot.jpg" alt="Profile Picture" class="profile-pic">
+            </div>
             
+            <div class="brand-box">
+                <h1>Your Name</h1>
+                <nav>
+                    <a href="index.html">home</a>
+                    <a href="papers.html" class="active">papers</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="content-body">
+            <h2>Selected Papers</h2>
             <ul class="paper-list">
                 <li>
-                    <strong>"Title of Your First Research Paper"</strong> (2026)<br>
-                    <em>Name of the Journal or Conference</em><br>
-                    <a href="manuscript1.pdf" target="_blank">[PDF]</a>
-                </li>
-                
-                <li>
-                    <strong>"Title of Your Second Research Paper"</strong> (2025)<br>
-                    <em>Name of the Journal or Conference</em><br>
-                    <a href="manuscript2.pdf" target="_blank">[Preprint]</a>
+                    <strong>"Title of Your Main Working Paper"</strong> (2026)<br>
+                    <em>Journal name or preprint link goes here</em> <a href="#" target="_blank">[PDF]</a>
                 </li>
             </ul>
-        </main>
+        </div>
     </div>
 
 </body>
