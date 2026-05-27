@@ -22,7 +22,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Forces image left and text block right */
+    justify-content: space-between; 
     margin-bottom: 60px;
     width: 100%;
 }
@@ -39,7 +39,6 @@ header {
     display: block;
 }
 
-/* Houses both the name and menu, aligned perfectly right */
 .header-right {
     display: flex;
     flex-direction: column;
@@ -56,7 +55,7 @@ h1 {
     line-height: 1.0; 
 }
 
-/* Menu Layout Box */
+/* --- NAVIGATION MENU UPDATES --- */
 nav {
     display: flex;
     justify-content: flex-end; 
@@ -64,11 +63,11 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
-    color: #777777; 
+    text-decoration: none; /* Disables standard underlines completely */
+    color: #888888; /* Elegant muted gray for unselected tabs */
     font-size: 1.15rem; 
     margin-left: 24px; 
-    transition: color 0.15s ease;
+    transition: color 0.2s ease; /* Smooth fade effect when hovering or clicking */
 }
 
 /* Snaps the right letter of 'teaching' flush with the end of your name */
@@ -76,14 +75,21 @@ nav a:last-child {
     margin-right: 0px; 
 }
 
+/* Hovering turns the text to a sharp off-black */
 nav a:hover {
     color: #111111;
-    text-decoration: underline;
+    text-decoration: none; /* Keeps underlines away on hover */
 }
 
+/* THE FONTS COLOR TRIGGER:
+   When a tab is active, it removes the underline completely 
+   and changes the font color to a deep, intentional academic blue (#0044cc).
+   (If you prefer a darker teal/Asai hue, swap this code with #006666)
+*/
 nav a.active {
-    color: #111111; 
-    text-decoration: underline;
+    color: #0044cc; 
+    font-weight: 400; /* Keeps the profile typography clean without unnatural bold shifts */
+    text-decoration: none; 
 }
 
 /* --- MAIN CONTENT AREA --- */
@@ -99,7 +105,7 @@ p {
 }
 
 .content-body a {
-    color: #1a0dab;
+    color: #0044cc; /* Matches body link anchors with your navigation accents */
     text-decoration: none;
 }
 
