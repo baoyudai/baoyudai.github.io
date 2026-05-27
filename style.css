@@ -9,28 +9,28 @@ body {
     /* LaTeX MathPazo / Palatino fallback font stack */
     font-family: "Palladio", "URW Palladio L", "Palatino Linotype", "Palatino", "Book Antiqua", Georgia, serif;
     color: #222222; 
-    line-height: 1.65; /* Slightly relaxed line height for larger text */
+    line-height: 1.65;
     background-color: #ffffff;
     padding: 140px 20px 60px 20px; 
 }
 
 .container {
-    max-width: 760px; /* Slightly widened to handle the bigger text footprint cleanly */
+    max-width: 760px;
     margin: 0 auto;
 }
 
-/* --- HEADER FIX --- */
+/* --- THE TOTAL HEADER FIX --- */
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between; /* Securely isolates photo on left, content block on right */
     margin-bottom: 60px;
     width: 100%;
 }
 
-/* Left side profile photo box */
+/* Profile photo size parameters */
 .profile-box {
-    flex: 0 0 115px; /* Scaled up image slightly to match larger text */
+    flex: 0 0 115px;
 }
 
 .profile-pic {
@@ -41,16 +41,22 @@ header {
     display: block;
 }
 
-/* Right side content block containing Name and Navigation */
+/* THE SPECIFIC ALIGNMENT CURE:
+   Grouping name and nav items as a tight vertical column 
+   and anchoring their right walls together flawlessly.
+*/
 .header-right {
-    text-align: right; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* This forces the menu to anchor to the exact rightmost letter of your name */
+    text-align: right;
 }
 
 h1 {
-    font-size: 2.7rem; /* Bumped up from 2.5rem */
+    font-size: 2.7rem;
     font-weight: 400; 
     color: #111111;
-    margin-bottom: 10px;
+    margin-bottom: 12px; /* Breathing room between name and links */
     letter-spacing: -0.5px;
     line-height: 1.1;
 }
@@ -58,14 +64,13 @@ h1 {
 /* Navigation Menu */
 nav {
     display: block;
-    margin-top: 6px;
 }
 
 nav a {
     text-decoration: none;
     color: #777777; 
-    margin-left: 22px; 
-    font-size: 1.05rem; /* Bumped up navigation text size */
+    margin-left: 24px; /* Clean tracking gaps between pages */
+    font-size: 1.15rem; 
     transition: color 0.15s ease;
 }
 
@@ -87,7 +92,7 @@ nav a.active {
 
 p {
     margin-bottom: 24px;
-    font-size: 1.15rem; /* Bumped up from 1.05rem */
+    font-size: 1.15rem;
     text-align: left;
 }
 
@@ -108,5 +113,5 @@ p {
 
 .paper-list li {
     margin-bottom: 28px;
-    font-size: 1.15rem; /* Bumped up to match body copy sizing */
+    font-size: 1.15rem;
 }
